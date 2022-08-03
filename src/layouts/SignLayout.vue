@@ -1,11 +1,10 @@
 <template>
-  <h1>fdsf</h1>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
 export default {
-  name: 'MainLayout'
+  name: 'SingLayout'
 }
 </script>
 
