@@ -1,18 +1,19 @@
 <template>
   <div class="sing-up">
     <div class="sing-up-background">
-      <img src="../assets/bg/galaxybackground.png" alt="">
+      <img src="../assets/bg/galaxybackgroundlog.png" alt="">
     </div>
     <div class="sing-up-header">
       <div class="sing-up-header-place">
-        <q-title-component title="Регистрация" />
+        <q-title-component title="Логин" />
         <div class="sing-up-header-place-input">
           <q-input standout v-model="text" label="ФИО" class="qInput" placeholder="Введите своё фио"/>
           <q-input standout v-model="text" label="Телефон" class="qInput" placeholder="Введите свой номер телефона"/>
           <q-input standout v-model="text" label="Пароль" class="qInput" placeholder="Введите свой пароль" type="password"/>
-          <q-select standout v-model="model" :options="options" class="qInput" label="Выберите свой колледж" />
         </div>
-        <q-btn class="button-send" text-color="white" label="Далее" />
+        <router-link to="/main">
+          <q-btn class="button-send" text-color="white" label="Вход" />
+        </router-link>
       </div>
     </div>
   </div>
@@ -21,18 +22,14 @@
 <script>
 import qTitleComponent from '../components/qTitleComponent'
 export default {
-  name: 'SignupPage',
+  name: 'SigninPage',
   components: {
     qTitleComponent
   },
   data () {
     return {
       text: '',
-      model: '',
-      options: [
-        'колледж1',
-        'колледж2'
-      ]
+      model: ''
     }
   }
 }
@@ -88,6 +85,13 @@ export default {
           margin-top: 20px;
         }
       }
+
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
       .button-send {
         background: #302F3D !important;
         width: calc(100% - 100px);

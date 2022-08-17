@@ -11,5 +11,10 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.desktop   {
+  background: #302F3D;
+  color: #fff;
+  padding: 25px;
+}
 @import "css/normalize.scss";
 </style>

@@ -71,10 +71,10 @@ module.exports = configure(function (ctx) {
       // https://v2.quasar.dev/quasar-cli-webpack/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
 
-      chainWebpack (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
-      }
+      // chainWebpack (chain) {
+      //   chain.plugin('eslint-webpack-plugin')
+      //     .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
+      // }
 
     },
 
@@ -83,7 +83,7 @@ module.exports = configure(function (ctx) {
       server: {
         type: 'http'
       },
-      port: 3000,
+      port: 9090,
       open: true // opens browser window automatically
     },
 
@@ -147,13 +147,13 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
-        description: 'A Quasar Project',
+        name: 'Student live',
+        short_name: 'SL',
+        description: 'Student live',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
-        theme_color: '#027be3',
+        theme_color: '#302F3D',
         icons: [
           {
             src: 'icons/icon-128x128.png',
